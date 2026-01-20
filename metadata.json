@@ -1,0 +1,7 @@
+{
+  "name": "VoxNotes",
+  "description": "A high-performance audio note-taking application that leverages Gemini 3 Flash to provide instant, accurate transcriptions and summaries of your voice recordings.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

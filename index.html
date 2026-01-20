@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxNotes - AI Audio Transcription</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --bg-app: #020617;
+      --bg-header: rgba(15, 23, 42, 0.5);
+      --bg-card: #1e293b;
+      --bg-input: #0f172a;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --border: #334155;
+      --accent: #3b82f6;
+      --accent-muted: rgba(59, 130, 246, 0.1);
+      --accent-hover: #2563eb;
+    }
+
+    body.light-theme {
+      --bg-app: #f8fafc;
+      --bg-header: rgba(255, 255, 255, 0.8);
+      --bg-card: #ffffff;
+      --bg-input: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #64748b;
+      --border: #e2e8f0;
+      --accent-muted: rgba(59, 130, 246, 0.05);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-app);
+      color: var(--text-primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 10px;
+    }
+
+    /* Override Tailwind with variables for themed elements */
+    .theme-bg-app { background-color: var(--bg-app); }
+    .theme-bg-card { background-color: var(--bg-card); }
+    .theme-bg-input { background-color: var(--bg-input); }
+    .theme-bg-header { background-color: var(--bg-header); }
+    .theme-text-primary { color: var(--text-primary); }
+    .theme-text-secondary { color: var(--text-secondary); }
+    .theme-border { border-color: var(--border); }
+    .theme-accent { color: var(--accent); }
+    .theme-bg-accent { background-color: var(--accent); }
+    .theme-bg-accent-muted { background-color: var(--accent-muted); }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
